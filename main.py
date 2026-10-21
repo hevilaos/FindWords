@@ -7,10 +7,9 @@
 
 
 #Próxima parte do estudo: 
-#praticar o acesso ás posições antes de inserir palavras inteiras
-#Tente colocar a letra "Q" na primeira Linha e primeira coluna, 
-#mantendo os pontos restantes, e imprimir novamente
-#a dica é que os índices começam em zero grade[indice_da_linha][indice_da_coluna]
+#inserir uma palavra na horizontal
+#palavra que vou inserir: "SUPERAI" (na realidade seria super AI, mas na minha estrutura imagino que se uma 
+#dica leva a duas palavras, essa expressão virá junta)
 
 #lista de listas pra montar a grade de letras
 
@@ -29,7 +28,14 @@ for l in range(linha):
         
     grade.append(nova_linha)
 
-#modificando a posição depois de ter a grade pronta
-grade[0][0] = "Q"
+#adicionando uma palavra
+grade[0][2] = "S"
+grade[0][3] = "U"
+grade[0][4] = "P"
+grade[0][5] = "E"
+grade[0][6] = "R"
+grade[0][7] = "A"
+grade[0][8] = "I"
+
 for l in grade:
     print(" ".join(l))
