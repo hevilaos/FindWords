@@ -5,12 +5,6 @@
 #git commit -m "Adiciona letra na primeira posição da grade"
 #git push
 
-
-#Próxima parte do estudo: 
-#inserir uma palavra na horizontal
-#palavra que vou inserir: "SUPERAI" (na realidade seria super AI, mas na minha estrutura imagino que se uma 
-#dica leva a duas palavras, essa expressão virá junta)
-
 #lista de listas pra montar a grade de letras
 
 linha = 8
@@ -29,13 +23,13 @@ for l in range(linha):
     grade.append(nova_linha)
 
 #adicionando uma palavra
-grade[0][2] = "S"
-grade[0][3] = "U"
-grade[0][4] = "P"
-grade[0][5] = "E"
-grade[0][6] = "R"
-grade[0][7] = "A"
-grade[0][8] = "I"
+palavra = "SUPERAI"
+#Essa palavra deve ser alocada na linha 0, mas começando a partir da coluna 2
+linhaPalavra = 0
+colunaInicialPalavra = 2
+for indice, letra in enumerate(palavra):
+    grade[linhaPalavra][colunaInicialPalavra+indice] = letra
+
 
 for l in grade:
     print(" ".join(l))
