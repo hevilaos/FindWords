@@ -22,14 +22,19 @@ for l in range(linha):
         
     grade.append(nova_linha)
 
+
 #adicionando uma palavra
 palavra = "SUPERAI"
 #Essa palavra deve ser alocada na linha 0, mas começando a partir da coluna 2
 linhaPalavra = 0
 colunaInicialPalavra = 2
-for indice, letra in enumerate(palavra):
-    grade[linhaPalavra][colunaInicialPalavra+indice] = letra
 
+if(colunaInicialPalavra +len (palavra) <= coluna):
+
+    for indice, letra in enumerate(palavra):
+        grade[linhaPalavra][colunaInicialPalavra+indice] = letra
+else:
+    print("Essa palavra não cabe na posição desejada")
 
 for l in grade:
     print(" ".join(l))
